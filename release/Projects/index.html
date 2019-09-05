@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="../site.css">
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+    <div id="container">
+        <div id="project-panels">
+            <div class="section">
+                <div class="project left">
+                    <div class="title">Personal Website</div>
+                    <div class="description">This website was my first personal project. I wanted to create something simple yet attractive. It will
+                        also be one of my projects which I will keep coming back to.</div>
+                    <div class="source"><a href="https://github.com/JoshuaLord/PersonalWebsite">GitHub</a></div>
+                    <div class="language">HTML5, CSS3, Javascript, jQuery</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<script>
+    $(function () {
+        $("#nav-placeholder").load("../nav.html");
+        $("#footer-placeholder").load("../footer.html");
+    });
+</script>
+
+<style>
+    #project-panels {
+        padding-top: 50px;
+
+        display: block;
+    }
+
+    .section {
+        width: 100%;
+        display: block;
+    }
+
+    .project {
+        width: 400px;
+        height: 300px;
+
+        border: 1px solid rgb(60, 60, 60);
+        border-radius: 5px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .left {
+        margin-left: 5%;
+        float: left;
+    }
+
+    .right {
+        margin-right: 5%;
+        float: right;
+    }
+
+    /* PROJECT  INSIDES */
+
+    .title {
+        color: rgb(231, 231, 231);
+        background-color: rgba(60, 60, 60, .5);
+        padding: 18.72px 0;
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .source {
+        text-align: center;
+    }
+
+    .source a, .source a:hover, .source a:visited {
+        color: rgb(0, 155, 202);
+        text-decoration: none;
+    }
+
+    .language {
+        background-color: rgba(83, 83, 83, .11);
+        padding: 18.72px 0;
+        text-align: center;
+        vertical-align: bottom;
+    }
+</style>

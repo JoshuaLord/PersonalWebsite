@@ -1,0 +1,120 @@
+<div id="nav-container">
+    <ul class="links">
+        <li class="nav-list-item">
+            <a class="nav-link" href="../Home/index.html">Home</a>
+        </li>
+        <li class="nav-list-item">
+            <a class="nav-link" href="../Projects/index.html">Projects</a>
+        </li>
+        <li class="nav-list-item">
+            <a class="nav-link" >Contact Me</a>
+        </li>
+    </ul>
+    <div class="logo-links">
+        <a href="https://www.linkedin.com/in/JoshuaParkerLord/"><img class="logo" src="../Images/LinkedIn.png" alt="LinkedIn"></a></img>
+        <a href="https://github.com/JoshuaLord/"><img class="logo" src="../Images/GitHub.svg" alt="Github"></a></img>
+    </div>
+</div>
+
+<style>
+    #nav-container {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+
+        padding-bottom: 58px;
+    }
+
+    .logo-links {
+        float: right;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        margin: 6.5px 15px;
+
+        padding-right: 20px;
+    }
+    
+    .logo-links a {
+        z-index: 2;
+    }
+
+    .links {
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        display: inline;
+    }
+
+    /* LINKEDIN AND GITHUB */
+    .logo {
+        max-width: 30px;
+        max-height: 30px;
+        padding: 5px;
+        border-radius: 4px;
+    }
+
+    .nav-list-item {
+        display: inline;
+    }
+
+    .nav-link::first-letter {
+        font-size: 24px;
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 20px;
+        color: rgb(231, 231, 231);
+        margin: 15px 15px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .nav-link:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: rgb(231, 231, 231);
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    .nav-link:hover:before {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    body {
+        margin: 0;
+    }
+</style>
+
+<script>
+    window.onload = new function() {
+        var path = window.location.pathname;
+        var page = path.split("/");
+        var pageName = page[page.length - 2];
+        
+        if (pageName != "Home") {
+            document.getElementById("nav-container").style.backgroundColor = "rgb(60, 60, 60)";    
+        }
+    };
+</script>
